@@ -1,0 +1,88 @@
+.floating-wa {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.floating-wa--visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.floating-wa__tooltip {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 50px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.floating-wa:hover .floating-wa__tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.floating-wa__btn {
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+  transition: var(--transition);
+  position: relative;
+}
+
+.floating-wa__btn:hover {
+  background: #1ea852;
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
+}
+
+/* Pulse ring */
+.floating-wa__pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 211, 102, 0.5);
+  animation: waPulse 2s ease-out infinite;
+}
+
+@keyframes waPulse {
+  0%   { transform: scale(1); opacity: 0.7; }
+  80%  { transform: scale(1.55); opacity: 0; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .floating-wa {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .floating-wa__btn {
+    width: 52px;
+    height: 52px;
+  }
+}

@@ -1,0 +1,161 @@
+.contact {
+  background: var(--white);
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact__header .section-subtitle {
+  margin: 0 auto;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* DETAILS */
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact__detail-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--off-white);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--light-gray);
+}
+
+.contact__detail-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.contact__detail-card h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.contact__detail-card p {
+  font-size: 0.92rem;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+.contact__link {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: var(--transition);
+  margin-bottom: 0.15rem;
+}
+
+.contact__link:hover {
+  color: var(--orange);
+}
+
+.contact__link--whatsapp {
+  color: #25D366;
+  font-weight: 700;
+}
+
+.contact__link--whatsapp:hover {
+  color: #1ea852;
+}
+
+/* HOURS */
+.contact__hours {
+  background: var(--navy);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+}
+
+.contact__hours h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+
+.contact__hours-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 2rem;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.contact__hours-grid span:nth-child(even) {
+  font-weight: 600;
+  text-align: right;
+}
+
+.closed {
+  color: rgba(255,100,100,0.8) !important;
+}
+
+/* MAP */
+.contact__map-wrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 450px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--light-gray);
+}
+
+.contact__map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact__map-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--white);
+  color: var(--navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.contact__map-btn:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__map-wrap {
+    height: 350px;
+  }
+}

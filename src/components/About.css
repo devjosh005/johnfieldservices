@@ -1,0 +1,231 @@
+.about {
+  background: var(--white);
+  overflow: hidden;
+}
+
+.about__glow {
+  width: 480px;
+  height: 480px;
+}
+
+.about__glow--1 {
+  background: var(--orange);
+  opacity: 0.08;
+  top: -120px;
+  right: -140px;
+}
+
+.about__glow--2 {
+  background: #1a6fe0;
+  opacity: 0.06;
+  bottom: -160px;
+  left: -140px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* VISUAL */
+.about__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about__img-wrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: visible;
+}
+
+.about__img-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(244,137,31,0.25), transparent 55%),
+    radial-gradient(circle at 85% 80%, rgba(26,111,224,0.2), transparent 55%),
+    linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.about__img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.about__img-icon {
+  position: relative;
+  z-index: 1;
+  font-size: 4rem;
+  opacity: 0.7;
+}
+
+.about__img-text {
+  position: relative;
+  z-index: 1;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.about__badge-float {
+  position: absolute;
+  bottom: -18px;
+  right: -18px;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.about__badge-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about__badge-label {
+  font-size: 0.7rem;
+  opacity: 0.85;
+  letter-spacing: 0.05em;
+}
+
+/* PAINT BRANDS */
+.about__paint-brands {
+  background: var(--off-white);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+
+.about__brands-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gray);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+
+.about__brand-chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.about__chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-sm);
+  height: 48px;
+  transition: var(--transition);
+}
+
+.about__chip:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.about__chip-logo {
+  max-height: 26px;
+  max-width: 90px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* TEXT */
+.about__body {
+  color: var(--gray);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+  font-size: 0.97rem;
+}
+
+.about__body strong {
+  color: var(--navy);
+}
+
+.about__pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.75rem 0;
+}
+
+.about__pillar {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.about__pillar-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.about__pillar-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.2rem;
+}
+
+.about__pillar-desc {
+  font-size: 0.78rem;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about__visual {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .about__badge-float {
+    bottom: -14px;
+    right: -10px;
+  }
+}

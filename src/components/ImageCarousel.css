@@ -1,0 +1,127 @@
+.img-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: var(--navy);
+}
+
+.img-carousel__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.img-carousel__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-carousel__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(244,137,31,0.28), transparent 55%),
+    radial-gradient(circle at 75% 75%, rgba(255,255,255,0.08), transparent 55%),
+    linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+
+.img-carousel__icon {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
+  opacity: 0.9;
+}
+
+.img-carousel__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(to top, rgba(13,27,42,0.85), transparent);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.img-carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-carousel__arrow:hover {
+  background: var(--orange);
+}
+
+.img-carousel__arrow--prev {
+  left: 0.85rem;
+}
+
+.img-carousel__arrow--next {
+  right: 0.85rem;
+}
+
+.img-carousel__dots {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+}
+
+.img-carousel__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.img-carousel__dot--active {
+  background: var(--orange);
+  width: 20px;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .img-carousel {
+    aspect-ratio: 4 / 3;
+  }
+
+  .img-carousel__arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}
