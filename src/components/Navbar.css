@@ -16,7 +16,7 @@
 }
 
 .navbar--scrolled .navbar__logo-img {
-  height: 48px;
+  width: 170px;
 }
 
 .navbar__inner {
@@ -37,8 +37,8 @@
 }
 
 .navbar__logo-img {
-  height: 56px;
-  width: auto;
+  width: 220px;
+  height: auto;
   max-width: none;
   flex-shrink: 0;
   object-fit: contain;
@@ -47,11 +47,11 @@
 
 @media (max-width: 600px) {
   .navbar__logo-img {
-    height: 44px;
+    width: 160px;
   }
 
   .navbar--scrolled .navbar__logo-img {
-    height: 40px;
+    width: 130px;
   }
 }
 
