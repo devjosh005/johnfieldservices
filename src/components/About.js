@@ -1,5 +1,6 @@
 import React from 'react';
 import { PAINT_BRANDS } from '../data/brands';
+import { ABOUT_WORKSHOP_IMAGE } from '../data/shopImages';
 import './About.css';
 
 const PILLARS = [
@@ -18,10 +19,14 @@ export default function About() {
         {/* Visual side */}
         <div className="about__visual">
           <div className="about__img-wrap">
-            <div className="about__img-placeholder">
-              <span className="about__img-icon">🚗</span>
-              <span className="about__img-text">Johnfield Workshop</span>
-            </div>
+            <img
+              src={ABOUT_WORKSHOP_IMAGE.image}
+              srcSet={ABOUT_WORKSHOP_IMAGE.srcSet}
+              sizes="(max-width: 900px) 90vw, 500px"
+              alt="Johnfield Services workshop with a vehicle on the wheel alignment bay"
+              className="about__img-photo"
+              loading="lazy"
+            />
             <div className="about__badge-float">
               <span className="about__badge-num">RC</span>
               <span className="about__badge-label">1147998</span>

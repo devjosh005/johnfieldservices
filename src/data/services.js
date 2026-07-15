@@ -1,3 +1,5 @@
+import { ALIGNMENT_SERVICE_PHOTOS, BODY_SHOP_PHOTOS, WHEEL_BALANCING_PHOTOS } from './shopImages';
+
 export const SERVICES = [
   {
     slug: 'body-shop',
@@ -8,12 +10,7 @@ export const SERVICES = [
     heroDesc: 'Johnfield Services operates a full professional body shop with a modern spray booth and oven-baking facility. We restore your vehicle\'s exterior to showroom condition — and we also supply the industry-grade paint brands professionals trust.',
     tags: ['Sikkens', 'DYNA', 'KAPCI', 'Spray Painting', 'Oven Baking'],
     featured: true,
-    gallery: [
-      { icon: '🔫', caption: 'Spray Booth — Precision Painting' },
-      { icon: '🔥', caption: 'Oven Baking for Factory-Hard Finish' },
-      { icon: '🚗', caption: 'Full Panel Resprays' },
-      { icon: '🎨', caption: 'Sikkens · DYNA · KAPCI Paint Stock' },
-    ],
+    gallery: BODY_SHOP_PHOTOS,
     sections: [
       {
         icon: '🔫',
@@ -89,11 +86,7 @@ Our lithium battery range is suitable for modern vehicles with high electronic d
     heroDesc: 'Unbalanced wheels cause vibration, uneven tyre wear, and unnecessary stress on your suspension. Our precision wheel balancing service corrects weight imbalances across all four wheels for a smoother, safer drive.',
     tags: ['All Tyre Sizes', 'Fast Service', 'All Vehicles'],
     featured: false,
-    gallery: [
-      { icon: '⚙️', caption: 'Computerised Wheel Balancing' },
-      { icon: '🔄', caption: 'Precision Counterweighting' },
-      { icon: '🚗', caption: 'Smooth, Vibration-Free Rides' },
-    ],
+    gallery: WHEEL_BALANCING_PHOTOS,
     sections: [
       {
         icon: '🔄',
@@ -133,11 +126,7 @@ Wheel balancing is quick — most vehicles are done in 30–45 minutes — and i
     heroDesc: 'Incorrect wheel alignment causes uneven tyre wear, pulls to one side, and reduces fuel efficiency. We offer both digital and analogue alignment to suit all vehicle types — restoring factory-spec geometry for safer, more efficient driving.',
     tags: ['Digital Alignment', 'Analogue Alignment', 'All Vehicles', 'Fuel Saving'],
     featured: false,
-    gallery: [
-      { icon: '🎯', caption: 'Digital Alignment Readout' },
-      { icon: '📐', caption: 'Factory-Spec Geometry Correction' },
-      { icon: '🔧', caption: 'Analogue Alignment for All Vehicles' },
-    ],
+    gallery: ALIGNMENT_SERVICE_PHOTOS,
     sections: [
       {
         icon: '📐',

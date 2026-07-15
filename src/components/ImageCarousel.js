@@ -26,7 +26,14 @@ export default function ImageCarousel({ slides, autoPlay = true, interval = 4500
         {slides.map((slide, i) => (
           <div className="img-carousel__slide" key={slide.caption || i}>
             {slide.image ? (
-              <img src={slide.image} alt={slide.caption || ''} className="img-carousel__img" />
+              <img
+                src={slide.image}
+                srcSet={slide.srcSet}
+                sizes={slide.srcSet ? '(max-width: 700px) 100vw, 1200px' : undefined}
+                alt={slide.caption || ''}
+                loading={i === 0 ? 'eager' : 'lazy'}
+                className="img-carousel__img"
+              />
             ) : (
               <div className="img-carousel__placeholder">
                 <span className="img-carousel__icon">{slide.icon || '🖼️'}</span>

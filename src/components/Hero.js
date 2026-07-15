@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import heroImage from '../images/hero-auto-service.svg';
+import { HERO_WORKSHOP_IMAGE } from '../data/shopImages';
 import './Hero.css';
 
 export default function Hero() {
@@ -62,11 +62,13 @@ export default function Hero() {
 
         <div className="hero__media">
           <img
-            src={heroImage}
-            alt="Technician servicing a vehicle at the Johnfield Services auto workshop"
+            src={HERO_WORKSHOP_IMAGE.image}
+            srcSet={HERO_WORKSHOP_IMAGE.srcSet}
+            sizes="(max-width: 900px) 90vw, 480px"
+            alt="Vehicle undergoing digital wheel alignment at the Johnfield Services workshop"
             className="hero__media-img"
-            width="800"
-            height="600"
+            width="1600"
+            height="1067"
             loading="eager"
             fetchPriority="high"
           />
